@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.8"  # ✅ Ensure correct Python version for Buildozer
+          python-version: "3.8"  # ✅ Ensures correct Python version for Buildozer
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -51,7 +51,7 @@ jobs:
           buildozer android debug
 
       - name: Upload APK Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4  # ✅ Updated to v4
         with:
           name: Kivy-APK
           path: bin/*.apk
